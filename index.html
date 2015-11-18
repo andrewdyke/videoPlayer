@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Player</title>
+	<link rel="stylesheet" href="style.css">
+  <script>
+  function playPause(btn,vid) {
+    var vid = document.getElementById(vid);
+    if(vid.paused) {
+      vid.play();
+      btn.innerHTML = "Pause";
+    } else {
+      vid.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+  </script>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="video-wrapper">
+    <video id ="my_video" src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4" controls>
+      <p>Your browser is sooo old that it doesn't even support video? #sadface</p>
+    </video>
+  </div>
+
+  <div class="video-progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <div id="video-controls" class="video-controls">
+    <button class="playpausebtn" onclick="playPause(this,'my_video')">Pause</button>
+    <button class="mute">Mute / Unmute</button>
+    <label class="volume"> 
+      <span>Volume</span>
+      <input type="range" min="0" max="10" step="1" value="5">
+    </label>
+  </div>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

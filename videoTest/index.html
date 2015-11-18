@@ -1,0 +1,65 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Video App</title>
+
+	<style>
+		div#video_player_box { 
+			width:550px; background:#000; margin:0px auto;
+		}
+
+		div#video_controls_bar { 
+			background: #333; padding:10px; color:#CCC;
+		}
+
+		input#seekslider{ 
+			width:180px; 
+		}
+		
+		input#volumeslider{ 
+			width: 80px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<!-- Video Wrapper -->
+<div id="video_player_box">
+
+	<!-- Video -->
+  <video id="my_video" width="550" height="310" autoplay>
+    <source src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4">
+  </video>
+  <!-- /video -->
+
+	<!-- Video Controls -->
+  <div id="video_controls_bar">
+  	<!-- Play/Pause -->
+    <button id="playpausebtn">Pause</button>
+    <!-- Time Slider -->
+    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+    <!-- Current Time in Video -->
+    <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
+    <!-- Mute/Unmute Button -->
+    <button id="mutebtn">Mute</button>
+    <!-- Volume Slider -->
+    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+  </div>
+  <!-- /video Controls -->
+
+</div>
+<!-- /Video Wrapper -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+<script src ="videoApp.js"></script>
+
+</body>
+
+</html>
