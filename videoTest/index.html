@@ -8,19 +8,23 @@
 	<title>Video App</title>
 
 	<style>
-		div#video_player_box { 
-			width:550px; background:#000; margin:0px auto;
+		div#playerBox { 
+			width:640px; 
+			background:#000; 
+			margin:0px auto;
 		}
 
-		div#video_controls_bar { 
-			background: #333; padding:10px; color:#CCC;
+		div#controlBar { 
+			background: #333; 
+			padding:10px; 
+			color:#CCC;
 		}
 
-		input#seekslider{ 
+		input#seekSlider{ 
 			width:180px; 
 		}
 		
-		input#volumeslider{ 
+		input#volSlider{ 
 			width: 80px;
 		}
 	</style>
@@ -30,26 +34,26 @@
 <body>
 
 <!-- Video Wrapper -->
-<div id="video_player_box">
+<div id="playerBox">
 
 	<!-- Video -->
-  <video id="my_video" width="550" height="310" autoplay>
+  <video id="theVid" width="640" height="360" autoplay>
     <source src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4">
   </video>
   <!-- /video -->
 
 	<!-- Video Controls -->
-  <div id="video_controls_bar">
+  <div id="controlBar">
   	<!-- Play/Pause -->
-    <button id="playpausebtn">Pause</button>
+    <button id="playPause">Pause</button>
     <!-- Time Slider -->
-    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+    <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
     <!-- Current Time in Video -->
-    <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
+    <span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
     <!-- Mute/Unmute Button -->
-    <button id="mutebtn">Mute</button>
+    <button id="muteBtn">Mute</button>
     <!-- Volume Slider -->
-    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+    <input id="volSlider" type="range" min="0" max="100" value="100" step="1">
   </div>
   <!-- /video Controls -->
 

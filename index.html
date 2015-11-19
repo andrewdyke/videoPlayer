@@ -1,47 +1,65 @@
+
 <!doctype html>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Video Player</title>
-	<link rel="stylesheet" href="style.css">
-  <script>
-  function playPause(btn,vid) {
-    var vid = document.getElementById(vid);
-    if(vid.paused) {
-      vid.play();
-      btn.innerHTML = "Pause";
-    } else {
-      vid.pause();
-      btn.innerHTML = "Play";
-    }
-  }
-  </script>
+
+	<title>Video App</title>
+
+	<style>
+		div#video_player_box { 
+			width:550px; background:#000; margin:0px auto;
+		}
+
+		div#video_controls_bar { 
+			background: #333; padding:10px; color:#CCC;
+		}
+
+		input#seekslider{ 
+			width:180px; 
+		}
+		
+		input#volumeslider{ 
+			width: 80px;
+		}
+	</style>
+
 </head>
+
 <body>
 
-<div class="wrapper">
+<!-- Video Wrapper -->
+<div id="video_player_box">
 
-  <div class="video-wrapper">
-    <video id ="my_video" src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4" controls>
-      <p>Your browser is sooo old that it doesn't even support video? #sadface</p>
-    </video>
-  </div>
+	<!-- Video -->
+  <video id="my_video" width="550" height="310" autoplay>
+    <source src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4">
+  </video>
+  <!-- /video -->
 
-  <div class="video-progress-bar">
-    <div class="progress"></div>
+	<!-- Video Controls -->
+  <div id="video_controls_bar">
+  	<!-- Play/Pause -->
+    <button id="playpausebtn">Pause</button>
+    <!-- Time Slider -->
+    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+    <!-- Current Time in Video -->
+    <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
+    <!-- Mute/Unmute Button -->
+    <button id="mutebtn">Mute</button>
+    <!-- Volume Slider -->
+    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
   </div>
-
-  <div id="video-controls" class="video-controls">
-    <button class="playpausebtn" onclick="playPause(this,'my_video')">Pause</button>
-    <button class="mute">Mute / Unmute</button>
-    <label class="volume"> 
-      <span>Volume</span>
-      <input type="range" min="0" max="10" step="1" value="5">
-    </label>
-  </div>
+  <!-- /video Controls -->
 
 </div>
+<!-- /Video Wrapper -->
 
-<script src="scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+<script src ="videoApp.js"></script>
+
 </body>
+
 </html>
