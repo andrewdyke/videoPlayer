@@ -1,0 +1,135 @@
+
+/**/
+body {
+	font-family: 'Work Sans', sans-serif;
+}
+
+i {
+	color: white;
+}
+
+input[type='range'] {
+	-webkit-appearance: none !important;
+	background: #666;
+	height:4px;
+}
+
+.hidden {
+	display: none;
+}
+
+button {
+	border: none;
+	background: none;
+	color: white;
+}
+
+div.controlsToggle {
+  width: 100%;
+  height: 100px;
+ /* position: fixed;*/
+	position: absolute;
+/*  bottom: 42px;*/
+	bottom: 0;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+div#video_player_box { 
+	position: fixed;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background:#000; 
+	margin:0px auto;
+}
+
+div#video_player_box video { 
+  /*height: 70%;*/
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div#video_controls_bar { 
+	display: none;
+	z-index: 9999999;
+	position: absolute;
+	bottom: 0;
+	padding-top: 30px;
+	height: 26px;
+	left: 0;
+	width: 100%;
+	/*background: rgba(0, 0, 0, 0.7);*/
+	background: linear-gradient(to bottom, rgba(125,185,232,0.01) 0%,rgba(0,0,0,0.22) 19%,rgba(0,0,0,1) 91%);
+	padding:10px; 
+	color:#CCC; 
+}
+
+input#seekslider{ 
+	width:180px; 
+}
+
+input#volumeslider{ 
+	width: 80px;
+}
+
+.fa-volume-up, .fa-volume-off {
+	font-size: 17px;
+}
+
+
+
+
+/*DARCY*/
+
+/*body {*/
+  /*background: black;*/
+  /*padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  display: block;
+  padding: 40px;
+  margin: 40px auto;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 0;
+  margin: 0 0 10px;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
+.video-wrapper video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #efefef;
+  margin: 0 0 10px 0;
+}
+.video-progress-bar .progress {
+  width: 0%;
+  height: 100%;
+  background: red;
+}
+*/

@@ -4,50 +4,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
 	<title>Video App</title>
-
-	<style>
-		div#video_player_box { 
-			width:550px; background:#000; margin:0px auto;
-		}
-
-		div#video_controls_bar { 
-			background: #333; padding:10px; color:#CCC;
-		}
-
-		input#seekslider{ 
-			width:180px; 
-		}
-		
-		input#volumeslider{ 
-			width: 80px;
-		}
-	</style>
-
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<i class="fa fa-play hidden"></i>
+
 
 <!-- Video Wrapper -->
 <div id="video_player_box">
 
 	<!-- Video -->
-  <video id="my_video" width="550" height="310" autoplay>
+  <video id="my_video" autoplay>
     <source src="http://craftymind.com/factory/html5video/BigBuckBunny_640x360.mp4">
   </video>
   <!-- /video -->
 
+  <!-- Show/Hide Controls Toggle -->
+  <div class="controlsToggle"></div>
+
 	<!-- Video Controls -->
   <div id="video_controls_bar">
   	<!-- Play/Pause -->
-    <button id="playpausebtn">Pause</button>
+    <button id="playbtn"><i id ="playPause" class="fa fa-pause"></i></button>
     <!-- Time Slider -->
     <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
     <!-- Current Time in Video -->
     <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
     <!-- Mute/Unmute Button -->
-    <button id="mutebtn">Mute</button>
+    <button id="mutebtn"><i id="muteIcon" class="fa fa-volume-off"></i></button>
     <!-- Volume Slider -->
     <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
   </div>
